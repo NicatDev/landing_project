@@ -4,6 +4,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 nav {
   padding: 16px 120px;
   display: flex;
@@ -24,6 +27,15 @@ nav {
   display: flex;
   align-items: center;
 }
+.pointer-elements a{
+    text-decoration: none;
+    color: #0a0a0a;
+}
+.nav-elements a {
+  text-decoration: none;
+  color: #005590;
+}
+
 .whatsapp-button {
   width: 154px;
   height: 48px;
@@ -32,20 +44,36 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+
   font-weight: 400;
   font-size: 16px;
 }
+
+.whatsapp-button:hover {
+  background-color: #21b056;
+}
+
 .whatsapp-button a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  color: white;
 }
 .cover-img img {
   width: 100%;
   margin: 40px 0 80px 0;
 }
+.cover-img-mobile {
+  display: none;
+}
+.cover-img-mobile img {
+  width: 100%;
+}
+.cover-img {
+  display: block;
+}
+
 .card-image img {
   width: 100%;
 }
@@ -112,24 +140,6 @@ nav {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
-  .box-container {
-    grid-template-columns: repeat(3, 1fr); /* 4 cards per row */
-  }
-}
-
-@media (max-width: 900px) {
-  .box-container {
-    grid-template-columns: repeat(2, 1fr); /* 3 cards per row */
-  }
-}
-
-@media (max-width: 600px) {
-  .box-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  }
-}
-
 .daily-winners-parent {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +150,7 @@ nav {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background-color: #F5FAFF;
+  background-color: #f5faff;
   overflow: hidden;
   margin-left: 20px;
 }
@@ -156,10 +166,9 @@ nav {
   margin: 10px;
 }
 .rules-parent {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 80px 0px;
+  margin: 80px 40px;
 }
 .rules-container {
   display: flex;
@@ -168,12 +177,12 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 20px;
-  gap:10px;
+  gap: 10px;
   padding: 85px 0px;
   background-color: #bee0ff;
 }
 .rules-button p {
-    margin-top:10px;
+  margin-top: 10px;
   background-color: #0098ce;
   color: white;
   font-size: 16px;
@@ -185,195 +194,258 @@ nav {
   justify-content: center;
   cursor: pointer;
 }
-.rules-button{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.rules-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .rules-button p:hover {
-    background-color: #4cb1d6;
-  }
-
-.rules-title{
-    margin: 0px 10vw;
+  background-color: #4cb1d6;
 }
 
-.footer-parent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #005590;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    height: 354px;
+.rules-title {
+  margin: 0px 10vw;
 }
 
-.footer-item{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    width: 250px;
-}
-.footer-description{
-    font-size: 16px;
+.footer-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #005590;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  height: 354px;
 }
 
-.footer-number{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 250px;
+  gap: 20px;
 }
-.footer-number p{
-    font-size: 24px;
+.footer-description {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
 }
-.footer-whatsapp-description{
-    font-size: 20px;
+
+.footer-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-number p {
+  font-size: 24px;
+}
+.footer-whatsapp-description {
+  font-size: 20px;
 }
 
 .step-container {
-    background-color: #00447a;
-    padding: 70px 20px;
-  }
-  .title {
-    font-family: Helvetica;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 58px;
-    letter-spacing: 0px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #ffffff;
-  }
-  .steps {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .step {
-    background-color: #bee0ff;
-    color: #00447a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 25%;
-    height: 300px;
-    text-align: center;
-  }
-  .step-number {
-    font-size: 40px;
-    font-weight: bold;
-    color: #005590;
-  }
-  .icon {
-    display: block;
-    font-size: 30px;
-    margin: 10px 0;
-  }
-  .step-text {
-    font-family: Helvetica;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0px;
-    text-align: center;
-    color: #005590;
-    margin-top: 20px;
-  }
-  
-  .step-logo-parent {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
-  
-  .step-logo-parent .step-logo {
-    width: 71px;
-    height: 67px;
-    margin-top: 38px;
-  }
-  
-  .step-logo-parent .right {
-    width: 27px;
-    height: 22.5px;
-  }
-  
-  .gift-person-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ebf5ff;
-    padding: 70px 30px;
-    width: 100%;
-  }
-  
-  .gift-person-container > div {
-    width: 40%;
-  }
-  
-  .gift-text h2 {
-    font-family: Helvetica;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 58px;
-    letter-spacing: 0px;
-    color: #005590;
-  }
-  
-  .gift-text p {
-    font-family: Helvetica;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0px;
-    color: #005590;
-    margin-top: 15px;
-  }
-  
-  .winner-card {
-    background-color: white;
-    padding: 40px 40px 40px 70px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: -2px 8px 20px 0px #0000000a;
-    box-shadow: -0.5px 0px 8px 0px #0000000a;
-    height: 248px;
-  }
-  .winner-avatar {
-    border-radius: 100%;
-    background-color: #F5FAFF;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90px;
-    height: 90px;
-  }
-  .winner-avatar img {
-    margin-top: 10px;
-    width: 90px;
-    height: 70px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-  }
-  .winner-name {
-      font-family: Helvetica;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
-      text-align: center;
-      color: #005590;
-      margin-top: 15px;
-  }
-  .winner-text {
-      font-family: Helvetica;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0px;    
-    color: #005590;
-    margin-left: 60px;
-  }
+  background-color: #00447a;
+  padding: 70px 20px;
+}
+.title {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 58px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.step {
+  background-color: #bee0ff;
+  color: #00447a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+  height: 300px;
+  text-align: center;
+  min-width: 400px;
+}
+.step-number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #005590;
+}
+.icon {
+  display: block;
+  font-size: 30px;
+  margin: 10px 0;
+}
+.step-text {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #005590;
+  margin-top: 20px;
+}
+
+.step-logo-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.step-logo-parent .step-logo {
+  width: 71px;
+  height: 67px;
+  margin-top: 38px;
+}
+
+.step-logo-parent .right {
+  width: 27px;
+  height: 22.5px;
+}
+
+.gift-person-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebf5ff;
+  padding: 70px 30px;
+  width: 100%;
+  gap: 30px;
+}
+
+.gift-person-container > div {
+  width: 40%;
+  min-width: 420px;
+}
+
+.gift-text h2 {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 58px;
+  letter-spacing: 0px;
+  color: #005590;
+}
+
+.gift-text p {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #005590;
+  margin-top: 15px;
+}
+
+.winner-card {
+  background-color: white;
+  padding: 40px 40px 40px 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: -2px 8px 20px 0px #0000000a;
+  box-shadow: -0.5px 0px 8px 0px #0000000a;
+  height: 248px;
+}
+.winner-avatar {
+  border-radius: 100%;
+  background-color: #f5faff;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+}
+.winner-avatar img {
+  margin-top: 10px;
+  width: 90px;
+  height: 70px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.winner-name {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #005590;
+  margin-top: 15px;
+}
+.winner-text {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #005590;
+  margin-left: 60px;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.mobile-menu-content {
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobile-menu .close-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 30px;
+}
+.mobile-menu ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.mobile-menu ul li a {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+.mobile-menu .whatsapp-button {
+  width: 100%;
+}
+
+.pointer-elements {
+  cursor: pointer;
+}

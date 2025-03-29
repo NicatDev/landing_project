@@ -5,27 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="media/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <title>Haleon</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo-parent"><img src="media/logo.svg" alt="Haleon" /></div>
-        <div class="nav-parent">
+        <div class="logo-parent">
+          <img src="media/logo.svg" alt="Haleon" />
+        </div>
+        <div class="nav-parent pointer-elements">
           <ul class="nav-elements">
-            <li><a>Hədiyyələr</a></li>
-            <li><a>Şərtlər</a></li>
-            <li><a>Qaliblər</a></li>
+            <li><a href="#gifts">Hədiyyələr</a></li>
+            <li><a href="#rules">Şərtlər</a></li>
+            <li><a href="#winners">Qaliblər</a></li>
             <li class="whatsapp-button">
-              <a><img src="media/whatsapp.svg" alt="whatsapp" /> Whatsapp</a>
+              <a href="https://wa.me/994551009129"><img src="media/whatsapp.svg" alt="whatsapp" /> Whatsapp</a>
             </li>
           </ul>
         </div>
+        <div class="burger-menu" onclick="openMenu()">☰</div>
       </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <div>
+            <span class="close-menu" onclick="closeMenu()">✖</span>
+            <div class="logo-parent">
+              <img src="media/logo.svg" alt="Haleon" />
+            </div>
+            <div class="pointer-elements">
+              <ul>
+                <li><a onClick="navToDiv('#gifts')" href="#gifts">Hədiyyələr</a></li>
+                <li><a onClick="navToDiv('#rules')" >Şərtlər</a></li>
+                <li><a onClick="navToDiv('#winners')">Qaliblər</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="whatsapp-button">
+            <a href="https://wa.me/994551009129"><img src="media/whatsapp.svg" alt="whatsapp" /> Whatsapp</a>
+          </div>
+        </div>
+      </div>
       <div class="cover-img"><img src="media/head.png" /></div>
+      <div class="cover-img-mobile"><img src="media/head_mobile.png" /></div>
     </header>
     <main>
-      <div class="gifts-parent">
+      <div id="gifts" class="gifts-parent">
         <div class="title-blue"><p>Hədiyyələr</p></div>
         <div class="cards-parent">
           <div class="card">
@@ -43,7 +68,7 @@
         </div>
       </div>
 
-      <div class="step-container">
+      <div id="rules" class="step-container">
         <h2 class="title">Şərtlər və mexanizm</h2>
         <div class="steps">
           <div class="step">
@@ -98,7 +123,7 @@
         </div>
       </div>
 
-      <div class="daily-winners-parent">
+      <div id="winners" class="daily-winners-parent">
         <div class="title-blue"><p>Gündəlik qaliblər</p></div>
         <div class="box-container">
           <div class="box">
@@ -192,7 +217,7 @@
     </div>
     <div class="footer-item">
       <div class="footer-number">
-        <img src="media/whatsapp.svg" />
+        <img src="media/whatsapp_green.svg" />
         <p>+99455 100 91 29</p>
       </div>  
       <div class="footer-whatsapp-description">
@@ -204,4 +229,16 @@
 </footer>
 
   </body>
+  <script>
+    function openMenu() {
+        document.getElementById("mobileMenu").style.display = "block";
+      }
+      function closeMenu() {
+        document.getElementById("mobileMenu").style.display = "none";
+      }
+      function navToDiv(id) {
+        window.location.href=id
+        closeMenu()
+      }
+  </script>
 </html>

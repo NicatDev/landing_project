@@ -1,0 +1,126 @@
+  @media (max-width: 1200px) {
+    .box-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .box-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    }
+    .gift-person-container > div {
+        width: 80%;
+    }
+    .title-blue p{
+      font-size: 42px;
+      line-height: 44px;
+    }
+    .step-text{
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+    .cover-img-mobile{
+        display: block;
+    }
+    .cover-img{
+        display: none;
+    }
+    .title-blue p{
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .gift-text h2{
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .gift-text p{
+      font-size: 16px;
+    }
+    .step-text{
+      font-size: 16px;
+    }
+    .step{
+      min-width: 100%
+    }
+    .gift-person-container > div{
+      min-width: 100%;
+      flex-wrap: wrap;
+      height: max-content;
+      justify-content: center;
+      gap:15px
+    }
+    .winner-card p{
+      margin-left: 0px;
+    }
+    .winner-card{
+      padding: 40px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .box-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+    nav {
+        padding: 16px 65px;
+    }
+    .cover-img img {
+        margin: 24px 0 80px 0;
+    }
+    .card-image img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .whatsapp-button {
+        width: 133px;
+        height: 44px;
+        font-size: 15px;
+    }
+    nav {
+        padding: 16px 40px;
+    }
+    .nav-elements {
+        gap: 18px;
+    }
+  }
+  @media (max-width: 700px) {
+    .nav-elements {
+        gap: 16px;
+    }
+    .whatsapp-button {
+        width: 125px;
+    }
+    .logo-parent img{
+        width: 80px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-parent {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+  }
+  @media (max-width: 500px) {
+    .box-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
