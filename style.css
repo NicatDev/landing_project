@@ -1,45 +1,379 @@
-nav{
-    padding: 16px 120px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-.nav-elements{
-    display: flex;
-    list-style-type: none;
-    gap:24px;
-    color:#005590;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
+nav {
+  padding: 16px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav-elements li{
-    display: flex;
-    align-items: center;
+.nav-elements {
+  display: flex;
+  list-style-type: none;
+  gap: 24px;
+  color: #005590;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-.whatsapp-button{
-    width: 154px;
-    height: 48px;
-    border-radius: 60px;
-    background-color: #25D366;
+.nav-elements li {
+  display: flex;
+  align-items: center;
+}
+.whatsapp-button {
+  width: 154px;
+  height: 48px;
+  border-radius: 60px;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.whatsapp-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.cover-img img {
+  width: 100%;
+  margin: 40px 0 80px 0;
+}
+.card-image img {
+  width: 100%;
+}
+.title-blue {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px;
+}
+.title-blue p {
+  font-size: 52px;
+  line-height: 58px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #005590;
+}
+.cards-parent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.card {
+  text-align: center;
+  padding: 24px;
+  max-width: 580px;
+  background-color: #fafafa;
+  border-radius: 16px;
+}
+.card-image img {
+  width: 532px;
+  height: 290px;
+  border-radius: 20px;
+}
+.card-title {
+  text-align: center;
+  margin: 24px;
+}
+.card-title p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-container {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 10px;
+}
+
+.box {
+  width: 230px;
+  height: 72px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: -2px 1px 20px 1px #0000000f;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .box-container {
+    grid-template-columns: repeat(3, 1fr); /* 4 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+.daily-winners-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #F5FAFF;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.box .avatar img {
+  padding: 6px 0px;
+}
+.winners-name {
+  text-align: left;
+  font-size: 16px;
+}
+.winners-name p {
+  margin: 10px;
+}
+.rules-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0px;
+}
+.rules-container {
+  display: flex;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  gap:10px;
+  padding: 85px 0px;
+  background-color: #bee0ff;
+}
+.rules-button p {
+    margin-top:10px;
+  background-color: #0098ce;
+  color: white;
+  font-size: 16px;
+  width: 84px;
+  height: 52px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.rules-button{
     display: flex;
-    align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.rules-button p:hover {
+    background-color: #4cb1d6;
+  }
+
+.rules-title{
+    margin: 0px 10vw;
+}
+
+.footer-parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #005590;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 354px;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
     color: white;
-    font-weight: 400;
+    width: 250px;
+}
+.footer-description{
     font-size: 16px;
 }
-.whatsapp-button a{
+
+.footer-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-number p{
+    font-size: 24px;
+}
+.footer-whatsapp-description{
+    font-size: 20px;
+}
+
+.step-container {
+    background-color: #00447a;
+    padding: 70px 20px;
+  }
+  .title {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  .steps {
     display: flex;
     justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .step {
+    background-color: #bee0ff;
+    color: #00447a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+    height: 300px;
+    text-align: center;
+  }
+  .step-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #005590;
+  }
+  .icon {
+    display: block;
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  .step-text {
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #005590;
+    margin-top: 20px;
+  }
+  
+  .step-logo-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .step-logo-parent .step-logo {
+    width: 71px;
+    height: 67px;
+    margin-top: 38px;
+  }
+  
+  .step-logo-parent .right {
+    width: 27px;
+    height: 22.5px;
+  }
+  
+  .gift-person-container {
+    display: flex;
     align-items: center;
-    gap:5px;
-}
-.cover-img img{
+    justify-content: center;
+    background-color: #ebf5ff;
+    padding: 70px 30px;
     width: 100%;
-    margin: 40px 0 80px 0;
-}
-.card-image img{
-    width: 100%;
-}
+  }
+  
+  .gift-person-container > div {
+    width: 40%;
+  }
+  
+  .gift-text h2 {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0px;
+    color: #005590;
+  }
+  
+  .gift-text p {
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #005590;
+    margin-top: 15px;
+  }
+  
+  .winner-card {
+    background-color: white;
+    padding: 40px 40px 40px 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: -2px 8px 20px 0px #0000000a;
+    box-shadow: -0.5px 0px 8px 0px #0000000a;
+    height: 248px;
+  }
+  .winner-avatar {
+    border-radius: 100%;
+    background-color: #F5FAFF;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+  }
+  .winner-avatar img {
+    margin-top: 10px;
+    width: 90px;
+    height: 70px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .winner-name {
+      font-family: Helvetica;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      color: #005590;
+      margin-top: 15px;
+  }
+  .winner-text {
+      font-family: Helvetica;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;    
+    color: #005590;
+    margin-left: 60px;
+  }
