@@ -16,7 +16,7 @@
       line-height: 44px;
     }
     .step-text{
-      font-size: 18px;
+      font-size: 24px;
     }
   }
   
@@ -42,7 +42,7 @@
       font-size: 16px;
     }
     .step-text{
-      font-size: 16px;
+      font-size: 22px;
     }
     .step{
       min-width: 100%
@@ -59,6 +59,9 @@
     }
     .winner-card{
       padding: 40px;
+    }
+    .box-container .box{
+      width: 270px;
     }
   }
 
@@ -118,9 +121,21 @@
     .burger-menu {
         display: block;
     }
+    nav .logo-parent{
+      height: 15px;
+    }
+    nav .logo-parent img{
+      width: 100%;
+    }
+    .rules-parent{
+      margin: 50px 20px;
+    }
   }
   @media (max-width: 500px) {
     .box-container {
       grid-template-columns: repeat(1, 1fr);
+    }
+    .card-image img {
+      height: 100%;
     }
   }

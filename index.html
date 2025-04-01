@@ -41,9 +41,10 @@
               </ul>
             </div>
           </div>
-          <div class="whatsapp-button">
+          <div class="whatsapp-button mobile-whatsapp">
             <a href="https://wa.me/994551009129"><img src="media/whatsapp.svg" alt="whatsapp" /> Whatsapp</a>
           </div>
+    
         </div>
       </div>
       <div class="cover-img"><img src="media/head.png" /></div>
@@ -218,7 +219,7 @@
     <div class="footer-item">
       <div class="footer-number">
         <img src="media/whatsapp_green.svg" />
-        <p>+99455 100 91 29</p>
+        <p class="call-number">+99455 100 91 29</p>
       </div>  
       <div class="footer-whatsapp-description">
         <p>Qoşulmaq üçün Whatsapp nömrəsinə yazın</p>
@@ -232,9 +233,11 @@
   <script>
     function openMenu() {
         document.getElementById("mobileMenu").style.display = "block";
+        document.body.style.overflow = 'hidden';
       }
       function closeMenu() {
         document.getElementById("mobileMenu").style.display = "none";
+        document.body.style.overflow = 'auto';
       }
       function navToDiv(id) {
         window.location.href=id
