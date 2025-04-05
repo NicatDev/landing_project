@@ -42,7 +42,7 @@
       font-size: 16px;
     }
     .step-text{
-      font-size: 22px;
+      font-size: 19px;
     }
     .step{
       min-width: 100%
@@ -61,7 +61,7 @@
       padding: 40px;
     }
     .box-container .box{
-      width: 270px;
+      width: 250px;
     }
   }
 
@@ -112,6 +112,9 @@
   }
   
   @media (max-width: 600px) {
+    .footer-parent{
+      height: 450px;
+    }
     .box-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -132,6 +135,9 @@
     }
   }
   @media (max-width: 500px) {
+    .top-steps p{
+      font-size: 13px ;
+    }
     .box-container {
       grid-template-columns: repeat(1, 1fr);
     }

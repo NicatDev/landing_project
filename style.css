@@ -4,6 +4,14 @@
   padding: 0px;
   box-sizing: border-box;
 }
+.footer-description p{
+  text-decoration: none !important;
+  color:white
+}
+.step-text {
+  -webkit-text-decoration: none;
+  text-decoration: none !important;
+}
 a{
   -webkit-text-decoration: none;
   text-decoration: none !important;
@@ -116,7 +124,7 @@ nav {
 }
 .card-image img {
   width: 532px;
-  height: 290px;
+  height: 300px;
   border-radius: 20px;
 }
 .card-title {
@@ -131,7 +139,7 @@ nav {
 }
 
 .box-container {
-  width: 1200px;
+  width: 1240px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -234,7 +242,7 @@ nav {
   display: flex;
   flex-direction: column;
   color: white;
-  width: 250px;
+  width: 300px;
   gap: 20px;
 }
 .footer-description {
@@ -246,7 +254,9 @@ nav {
 .footer-number {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+  gap:20px;
+  cursor: pointer;
 }
 .footer-number p {
   font-size: 24px;
@@ -295,6 +305,9 @@ nav {
   font-size: 30px;
   margin: 10px 0;
 }
+.card-title span{
+  white-space: nowrap;
+}
 .step-text {
   font-family: Helvetica;
   font-weight: 400;
@@ -302,7 +315,7 @@ nav {
   line-height: 32px;
   letter-spacing: 0px;
   text-align: center;
-  color: #005590;
+  color: #005590 !important;
   margin-top: 20px;
 }
 
@@ -430,6 +443,13 @@ nav {
   flex-direction: column;
   justify-content: space-between;
 }
+.top-steps{
+  margin-top:20px !important;
+  margin-bottom:0px;
+}
+.top-steps p{
+  width: 380px !important;
+}
 .mobile-menu .close-menu {
   position: absolute;
   top: 15px;
@@ -474,3 +494,80 @@ nav {
  text-align: center;
 }
 
+
+/* Open Modal Container/Wrapper Full-screen */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Center modal container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0; /* to be hidden by default */
+  pointer-events: none; /* so we can click the modal trigger */
+  top: 0;
+  left: 0;
+  height: 100vh; /* =100% of viewport height */
+  width: 100vw; /* = 100% of viewport width */
+  transition: opacity 0.3s ease;
+}
+
+/* Activate the class that we used in JS for the Event Listeners of modal's open and close button */
+.modal-container.show {
+  pointer-events: auto; /* set back the default value */
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* box shadow to add depth */
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%; /* Assures that it' ll be kept inside the browser width */
+  text-align: center;
+  height: 60vh;
+  gap:10px;
+  overflow-y: scroll;
+
+}
+
+.modal-content h1 {
+  margin: 0;
+}
+
+.modal-content p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Remove Modal at First */
+.modal_container {
+  display: none;
+
+}
+.delete-button img{
+  height: 30px;
+  cursor: pointer;
+}
+
+.delete-button{
+  background-color: white;
+  border: none;
+  color:white;
+  width: 30px;
+  height: 30px;
+  position: sticky;
+  top:1px;
+  margin-left: 100%;
+}
+.modal-content p{
+text-align: start;
+  font-size: 17px;
+}
+.modal-content h1{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
